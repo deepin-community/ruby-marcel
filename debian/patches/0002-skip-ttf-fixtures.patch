@@ -1,0 +1,21 @@
+From: =?utf-8?q?C=C3=A9dric_Boutillier?= <boutil@debian.org>
+Date: Fri, 28 Aug 2020 10:51:08 +0200
+Subject: skip ttf fixtures
+
+They cause test failures with ruby-mimemagic 0.5
+Bug: https://github.com/basecamp/marcel/issues/21
+---
+ test/test_helper.rb | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+--- a/test/test_helper.rb
++++ b/test/test_helper.rb
+@@ -35,7 +35,7 @@
+           if File.file?(name)
+             _, content_type, extra, extension = *name.match(/\A([^\/]+\/[^\/]*)\/?(.*)\.(\w+)\Z/)
+             extra = nil if content_type[-content_type.size..-1] == extra
+-            yield files("#{folder}/#{name}"), name, content_type
++            yield files("#{folder}/#{name}"), name, content_type unless extension == "ttf"
+           end
+         end
+       end

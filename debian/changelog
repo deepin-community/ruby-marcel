@@ -1,0 +1,69 @@
+ruby-marcel (1.0.1+dfsg-2) unstable; urgency=medium
+
+  * Team upload.
+  * Upload to unstable.
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Sat, 15 May 2021 16:12:21 +0530
+
+ruby-marcel (1.0.1+dfsg-1) experimental; urgency=medium
+
+  * Team upload
+  * Add lintian overrides for test data
+  * Bump Standards-Version to 4.5.1 (no changes needed)
+  * Switch to github for source
+  * New upstream version 1.0.1
+    The mimemagic dependency—which relies on GPL-licensed mime type data from
+    freedesktop.org’s shared-mime-info project—is removed. Marcel now directly
+    uses mime type data adapted from the Apache Tika project, distributed under
+    the Apache License.
+  * Generate tables during build
+  * New upstream version 1.0.1+dfsg (exclude generated tables)
+  * Refresh patches
+  * Update (build) dependencies
+  * Update copyright for data/tika.xml
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 29 Apr 2021 16:36:46 +0530
+
+ruby-marcel (0.3.2-4) unstable; urgency=medium
+
+  * Team upload
+  * Change strategy to remove font fixtures causing test failures
+    with mimemagic 0.5, fixing autopkgtests
+    + patch tests to skip font fixtures involved in failing tests
+    + remove unnecessary d/clean file
+
+ -- Cédric Boutillier <boutil@debian.org>  Fri, 28 Aug 2020 10:23:14 +0200
+
+ruby-marcel (0.3.2-3) unstable; urgency=medium
+
+  * Team upload
+  * Clean fixture involved in failing tests
+  * Update packaging according to dh-make-ruby
+    - v4 watch file
+    - gem style install
+    - Standards-Version bumped to 4.5.0 (no changes needed)
+    - debhelper-compat bumped to 13
+
+ -- Cédric Boutillier <boutil@debian.org>  Fri, 31 Jul 2020 16:45:18 +0200
+
+ruby-marcel (0.3.2-2) unstable; urgency=medium
+
+  [ Utkarsh Gupta ]
+  * Add salsa-ci.yml
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Cédric Boutillier ]
+  * Clean fixture involved in failing tests with ruby-mimemagic 0.3.5
+
+ -- Cédric Boutillier <boutil@debian.org>  Fri, 31 Jul 2020 16:39:35 +0200
+
+ruby-marcel (0.3.2-1) unstable; urgency=medium
+
+  * Initial release (Closes: #897584)
+
+ -- Sruthi Chandran <srud@disroot.org>  Fri, 04 May 2018 11:21:43 +0530

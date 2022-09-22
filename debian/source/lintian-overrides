@@ -1,0 +1,3 @@
+# test data
+ruby-marcel source: source-is-missing test/fixtures/magic/application/vnd.adobe.flash.movie/flash.swf
+ruby-marcel source: source-is-missing test/fixtures/name/application/vnd.adobe.flash.movie/flash.swf
